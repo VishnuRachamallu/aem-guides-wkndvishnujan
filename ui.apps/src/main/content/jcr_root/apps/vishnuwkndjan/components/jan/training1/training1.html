@@ -1,0 +1,11 @@
+First name : ${properties.fname}
+
+<head data-sly-use.clientLib="${'/libs/granite/sightly/templates/clientlib.html'}">
+
+<!--/* for css+js */-->
+<meta data-sly-call="${clientLib.all @ categories='traininglib'}" data-sly-unwrap></meta>
+<div data-sly-use.var="com.adobe.aem.guides.vishnujan.core.models.Training1">
+model :${var.fname}
+<br>using named:${var.firstName}
+
+</div>

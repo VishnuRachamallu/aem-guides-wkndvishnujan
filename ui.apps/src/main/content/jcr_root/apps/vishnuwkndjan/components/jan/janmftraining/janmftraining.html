@@ -1,0 +1,38 @@
+JAN mf training component.
+
+<div data-sly-use.var='com.adobe.aem.guides.vishnujan.core.models.JanMfTraining1'>
+Direct list:${var.booksauthor}
+<p>iterating list: </p>
+
+<div data-sly-list.eachbookname=${var.booksauthor}>
+Item Count:${eachbooknameList.count}<br>
+${eachbookname}
+</div>
+</div>
+
+
+<div data-sly-list.item="${var.bookDetailsWithMap}">
+<br>Book ${itemList.count}
+Name: ${item.bookname}
+Subject:${item.booksubject}
+Year:${item.publishyear}
+</div>
+
+<div data-sly-list.item="${var.bookDetailsWithBean}">
+<br>Book ${itemList.count}
+Name: ${item.bookName}
+Date:${'MMM dd,yyyy' @ format=item.publishDate}
+Copies:${item.copies}
+</div>
+
+
+
+<div data-sly-list.item="${var.nestedMFWithBean}">
+<br>Book ${itemList.count}
+Name: ${item.bookName}
+Subject :${item.bookSubject}
+<div data-sly-list.edition="${item.bookEditions}">
+edition Date:${'MMM dd,yyyy' @ format=edition.editondate}
+Edition number:${edition.editionNumber}
+</div>
+</div>
