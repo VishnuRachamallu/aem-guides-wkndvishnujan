@@ -8,12 +8,15 @@ import java.util.List;
 import java.util.Map;
 
 import javax.inject.Inject;
+import javax.inject.Named;
 
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.DefaultInjectionStrategy;
 import org.apache.sling.models.annotations.Model;
 import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.adobe.aem.guides.vishnujan.core.helper.MultifieldHelper;
 import com.adobe.aem.guides.vishnujan.core.helper.MultifieldHelper2;
@@ -28,6 +31,10 @@ public class JanMfTraining1 implements JanMfTraining1Interface {
 
 	@ValueMapValue
 	private List<String> booksauthor;
+	
+	@Inject
+    @Named("log")
+    private Logger logger;
 
 	@Override
 	public List<String> getBooksauthor() {
@@ -77,6 +84,8 @@ public class JanMfTraining1 implements JanMfTraining1Interface {
 	@Override
 	public List<MultifieldHelper2> getNestedMFWithBean() {
 		// TODO Auto-generated method stub
+		
+		Logger Log=LoggerFactory.getLogger(getClass());
 		List<MultifieldHelper2> nestedeMF = new ArrayList<>();
 		Resource resource = componenetResource.getChild("bookdetailswithnastedmf");
 
@@ -96,6 +105,7 @@ public class JanMfTraining1 implements JanMfTraining1Interface {
 			nestedeMF.add(multifieldHelper2);
 		}
 
+		Log.info("\nhello vishnu");
 		return nestedeMF;
 	}
 

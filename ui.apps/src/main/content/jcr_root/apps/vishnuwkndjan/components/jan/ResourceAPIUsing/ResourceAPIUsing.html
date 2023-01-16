@@ -1,0 +1,30 @@
+<head data-sly-use.clientLib="${'/libs/granite/sightly/templates/clientlib.html'}">
+
+<!--/* for css+js */-->
+<meta data-sly-call="${clientLib.all @ categories='traininglib'}" data-sly-unwrap></meta>
+
+
+
+<div data-sly-use.var="${'com.adobe.aem.guides.vishnujan.core.models.JanResourceAPIUsage' }">
+Testing getChild() Method :${var.childMethod}
+<br>
+Testing getChildren() Method :${var.childrenMethod}
+<br>
+Testing getParent() Method :${var.parentMethod}
+<br>
+Testing getResourceMetadata() Method :${var.resourceMetadataMethod}
+<br>
+Testing getResourceSuperType() Method :${var.resourceSuperTypeMethod}
+<br>
+Testing getResourceType() Method :${var.getResourceTypeMethod}
+<br>
+Testing getValueMapValue() Method :${var.valueMapValueMethod}
+<br>
+Testing hasChildren() Method :${var.hasChildrenMethod}
+<br>
+Testing isResourceType() Method :${var.isResourceTypeMethod}
+<br>
+Testing listChildren() Method :${var.listChildrenMethod}
+
+
+</div>
