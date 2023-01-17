@@ -1,0 +1,35 @@
+<head data-sly-use.clientLib="${'/libs/granite/sightly/templates/clientlib.html'}">
+
+<!--/* for css+js */-->
+<meta data-sly-call="${clientLib.all @ categories='traininglib'}" data-sly-unwrap></meta>
+
+
+
+<div data-sly-use.var="${'com.adobe.aem.guides.vishnujan.core.models.JanPageManagerAPI' }">
+Testing copy() Method :${var.copyMethod}
+<br>
+Testing copy() with autosave Method :${var.copyMethodwithAutoSave}
+<br>
+Testing create() page Method :${var.createMethodPage}
+<br>
+Testing createRevision() page Method :${var.createRivisionMethod}
+<br>
+Testing createRevision() with label and comment page Method :${var.createRivisionMethodWithLabelsAndComments}
+<!-- Why below command  is getting executed eventhough it is commented. investigate futher . 
+removed $ to not execute the command
+<br>Testing delete() page Method :{var.deleteMethod}  -->
+<br>
+Testing move() page Method :${var.moveMethod}
+<br>
+Testing getContainingPage() page Method :${var.getContainingPageMethod}
+<br>
+Testing RestoringRevisionId page Method :
+<div data-sly-list.item=${var.workingWithRestoreRevision}>
+${item}
+</div>
+<br>
+Vishnu test revisions ${var.VishnuRevisions}
+<br>
+********* touch() method is not working properly: ${var.touchMethod}
+
+</div>

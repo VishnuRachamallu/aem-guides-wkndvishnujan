@@ -90,15 +90,15 @@ public class JanResourceAPIUsage {
 		Resource resource = resolver.getResource("/content/vishnuwkndjan/us/en/resource-api-usage");
 		return resource.isResourceType("cq:Page");
 	}
-	
+
 	public String listChildrenMethod() {
 		Resource resource = resolver.getResource("/content/vishnuwkndjan/us");
-		Iterator<Resource> itter=resource.listChildren();
-		String names="";
+		Iterator<Resource> itter = resource.listChildren();
+		String names = "";
 		while (itter.hasNext()) {
-			names=names+itter.next().getName()+"\n";
+			names = names + itter.next().getName() + "\n";
 		}
-		
+
 		return names;
 	}
 
