@@ -1,0 +1,16 @@
+<div data-sly-use.var="${'com.adobe.aem.guides.vishnu.core.models.HtlTrainingNumberFormat'}"></div>
+
+<div> ${'#.000' @ format=var.number , type='number'} </div>
+
+<div> ${'###.000' @ format=var.number , type='number'} </div>
+
+<div> ${'#.000 ;(#.00)' @ format=var.number , type='number'} </div>
+
+<div> ${'#.000 ;-#.00' @ format=var.number , type='number'} </div>
+<div> ${'#.### ;-#.###' @ format=var.number , type='number'} </div>
+
+<div> ${'#.000E00' @ format=var.number , type='number'} </div>
+
+<div> ${'#%' @ format=var.number , type='number'} </div>
+
+<p data-sly-text="${currentPage.name}" > This is number </p>

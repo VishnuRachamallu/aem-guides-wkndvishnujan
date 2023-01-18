@@ -1,0 +1,58 @@
+<head data-sly-use.clientLib="${'/libs/granite/sightly/templates/clientlib.html'}">
+
+<!--/* for css+js */-->
+<meta data-sly-call="${clientLib.all @ categories='traininglib'}" data-sly-unwrap></meta>
+
+
+
+<div data-sly-use.var="${'com.adobe.aem.guides.vishnujan.core.models.JanPageAPIUsage' }">
+Testing canUnlock() Method :${var.canUnlockMethod}
+<br>
+Testing getAbsoluteParent(int level) Method :${var.getAbsoluteParentMethod}
+<br>
+Testing getContentResource() Method :${var.getContentResourceMethod}
+<br>
+Testing getContentResource(String) relative Method :${var.getContentResourceMethodRelativePath}
+<br>
+Testing getDepth()  Method :${var.getDepthMethod}
+<br>
+Testing getLanguage()  Method :${var.getLanguageMethod}
+<br>
+Testing getLastModifiedMethod()  Method :${ 'dd~MMMM-yyyy' @ format=var.getLastModifiedMethod}
+<br>
+Testing getLastModifiedByMethod()  Method :${var.getLastModifiedByMethod}
+<br>
+Testing page.getName() page.getTitle() page.getPageTitle() page.getNavigationTitle()  Method :${var.getNameAndNavigationTitleMethods}
+<br>
+Testing getParent()  Method :${var.getParentPageMethod}
+<br>
+Testing getParent(2)  Method relative:${var.getParentPageMethodRelative}
+<br>
+Testing getProperties()  Method :${var.getPropertiesMethod}
+<br>
+Testing getTags()  Method :${var.getTagsMethod}
+<br>
+Testing getTemplate()  Method :${var.getTemplateMethod}
+<br>
+Testing getVanityUrl()  Method :${var.getVanityUrlMethod}
+<br>
+Testing page.hasChild("en")  Method :${var.hasChildMethod}
+<br>
+Testing hasContent()  Method :${var.hasContentMethod}
+<br>
+Testing listChildren()  Method :${var.listChildrenMethodPage}
+<br>
+Testing isValid()  Method :${var.isValidMethod}
+<br>
+Testing lock and unlock  Method :
+<br>page.canUnlock():${var.canUnlockMethod},
+<br>page.isLocked() :${var.isLockedMethod}
+<br>page.lock():${var.lockMethod},
+<br>page.getLockOwner():${var.getLockOwnerMethod},
+<br>page.isLocked():${var.isLockedMethod},
+<br>page.canUnlock():${var.canUnlockMethod},
+<br>page.unlock():${var.unlockMethod},
+<br>page.isLocked():${var.isLockedMethod}
+
+
+</div>
