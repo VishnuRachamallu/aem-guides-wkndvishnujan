@@ -1,0 +1,26 @@
+First name : ${properties.fname}
+
+<head
+	data-sly-use.clientLib="${'/libs/granite/sightly/templates/clientlib.html'}">
+
+<!--/* for css+js */-->
+<meta data-sly-call="${clientLib.all @ categories='traininglib'}"
+	data-sly-unwrap></meta>
+<div
+	data-sly-use.var="com.adobe.aem.guides.vishnujan.core.models.PropTest">
+	<ul data-sly-list.key="${var.properties}">
+		<li>KEY: ${key}, VALUE: ${var.properties[key]}</li>
+	</ul>
+</div>
+
+Hello
+
+
+<ul data-sly-list.key="${var.pageProperties}">
+	<li>KEY: ${key}, VALUE: ${var.pageProperties[key]}</li>
+</ul>
+
+hello again
+<div data-sly-list.key="${var.pageProperties}">
+<p>KEY: ${key}, VALUE:${var.pageProperties[key]}<p>
+</div>
