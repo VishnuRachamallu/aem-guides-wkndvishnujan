@@ -2,6 +2,8 @@ package com.adobe.aem.guides.vishnujan.core.servlets;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.time.ZonedDateTime;
+import java.time.format.*;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -82,6 +84,17 @@ public class KarthikServletPath2 extends SlingSafeMethodsServlet {
 		response.setContentType("application/json");
 		response.setCharacterEncoding("UTF-8");
 		out.print(jsonObject.toString());
+
+		/*
+		 * ZonedDateTime dt = ZonedDateTime.now(); DateTimeFormatter df =
+		 * DateTimeFormatter.ISO_OFFSET_DATE_TIME;
+		 * 
+		 * out.print("\n"); out.print(dt.format(df)); out.print("\n");
+		 * out.print(ZonedDateTime.now().plusSeconds(30).format(df));
+		 */
+
+
+
 		out.flush();
 	}
 

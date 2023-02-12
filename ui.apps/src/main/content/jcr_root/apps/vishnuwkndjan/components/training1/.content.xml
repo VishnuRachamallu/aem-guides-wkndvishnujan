@@ -2,5 +2,5 @@
 <jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
     jcr:description="this is demo fir training 1"
     jcr:primaryType="cq:Component"
-    jcr:title="Training 1 Jan"
+    jcr:title="Training 1"
     componentGroup="VISHNU JAN Sites Project - Content"/>

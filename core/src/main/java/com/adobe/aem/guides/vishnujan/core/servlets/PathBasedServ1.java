@@ -15,7 +15,7 @@ import org.osgi.service.component.annotations.Component;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-@Component(service = Servlet.class)
+@Component(service = Servlet.class,immediate = true)
 @SlingServletPaths(value = { "/bin/sampleservletpath" })
 public class PathBasedServ1 extends SlingSafeMethodsServlet {
 
