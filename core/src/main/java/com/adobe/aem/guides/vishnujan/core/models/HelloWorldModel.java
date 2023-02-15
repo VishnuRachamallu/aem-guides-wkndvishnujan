@@ -28,6 +28,7 @@ import org.apache.sling.models.annotations.injectorspecific.OSGiService;
 import org.apache.sling.models.annotations.injectorspecific.SlingObject;
 import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
 import org.apache.sling.settings.SlingSettingsService;
+import org.osgi.service.component.annotations.Reference;
 
 import com.day.cq.wcm.api.Page;
 import com.day.cq.wcm.api.PageManager;
@@ -43,6 +44,8 @@ public class HelloWorldModel {
 
     @OSGiService
     private SlingSettingsService settings;
+    
+    
     @SlingObject
     private Resource currentResource;
     @SlingObject

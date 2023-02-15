@@ -95,7 +95,7 @@ public class SetExpiryForAssets extends SlingSafeMethodsServlet {
 
 			Node node = rs.getChild("jcr:content/metadata").adaptTo(Node.class);
 			try {
-				node.setProperty("prism:expirationDate", "2023-02-12T14:07:00+05:30");
+				node.setProperty("prism:expirationDate", "2023-02-12T14:39:00.000+05:30");
 				node.save();
 			} catch (RepositoryException e1) {
 				// TODO Auto-generated catch block
