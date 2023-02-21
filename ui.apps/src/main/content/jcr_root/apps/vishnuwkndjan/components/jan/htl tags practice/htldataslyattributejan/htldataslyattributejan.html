@@ -1,0 +1,33 @@
+<div
+	data-sly-use.var="${'com.adobe.aem.guides.vishnujan.core.models.HtlTrainingListRepeat'}"></div>
+
+
+
+<div id="html-attribute" class="geeks">
+	<p>using html tag</p>
+</div>
+
+<div id="sly-attribute" data-sly-attribute.class="geeks">
+	<p>using Slightly attribute</p>
+</div>
+
+<div id="html-attribute2" class="">
+	<p>using html tag will emply class</p>
+</div>
+
+<div id="sly2-attribute" data-sly-attribute.class="geeks2">
+	<p>using Slightly attribute with class vlaue</p>
+</div>
+
+
+<div id="sly3-attribute" data-sly-attribute=${var.sampleMap}>
+	<p>using Slightly attribute with dynamic list assed to
+		data-sly-attribute</p>
+</div>
+
+<div id="sly3-attribute" data-sly-attribute=${var.sampleMap}
+	data-sly-attribute.key1="vishnu">
+	<p>using Slightly attribute with dynamic list assed to
+		data-sly-attribute</p>
+</div>
+
