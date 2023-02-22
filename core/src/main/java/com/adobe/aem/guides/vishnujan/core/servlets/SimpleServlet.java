@@ -37,20 +37,18 @@ import java.io.IOException;
  * idempotent. For write operations use the {@link SlingAllMethodsServlet}.
  */
 @Component(service = { Servlet.class })
-@SlingServletResourceTypes(
-        resourceTypes="vishnuwkndjan/components/page",
-        methods=HttpConstants.METHOD_GET,
-        extensions="txt")
+@SlingServletResourceTypes(resourceTypes = "vishnuwkndjan/components/page", methods = HttpConstants.METHOD_GET, extensions = "txt")
 @ServiceDescription("Simple Demo Servlet")
 public class SimpleServlet extends SlingSafeMethodsServlet {
 
-    private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;
 
-    @Override
-    protected void doGet(final SlingHttpServletRequest req,
-            final SlingHttpServletResponse resp) throws ServletException, IOException {
-        final Resource resource = req.getResource();
-        resp.setContentType("text/plain");
-        resp.getWriter().write("Title = " + resource.getValueMap().get(JcrConstants.JCR_TITLE));
-    }
+	@Override
+	protected void doGet(final SlingHttpServletRequest req, final SlingHttpServletResponse resp)
+			throws ServletException, IOException {
+		final Resource resource = req.getResource();
+		resp.setContentType("text/plain");
+		resp.getWriter().write(" SimpleServlet Title = " + resource.getValueMap().get(JcrConstants.JCR_TITLE));
+	}
+
 }
